@@ -1,5 +1,8 @@
 
 # Classifier
+
+extend from [bhrigu123/classifier](https://github.com/bhrigu123/classifier)
+
 Organize files in your current directory, by classifying them into folders of music, pdfs, images, etc.
 
 ## Installation
@@ -7,7 +10,7 @@ Organize files in your current directory, by classifying them into folders of mu
 $ pip install classifier
 ```
 #### Compatibility
-* Python 2.7 / Python 3.4
+* Python 3.7
 * Linux / OSX / Windows
 
 
