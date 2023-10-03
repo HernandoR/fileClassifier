@@ -1,17 +1,16 @@
-from typing import Any
 
 
-class Action:
-    def __init__(self, name: str, description: str, action: function):
+class Trigger:
+    def __init__(self,name: str,description:str,judge:function):
         self.name = name
         self.description = description
-        self.act = action
+        self.judge = judge
     
     def __call__(self, *args: Any, **kwds: Any) -> Any:
         try:
-            return self.action(*args, **kwds)
+            return self.judge(*args, **kwds)
         except Exception as e:
-            print(f"Error in action: {self.name}: {str(e)}")
+            print(f"Error in judge {self.name}:{str(e)}")
             if input("Proceed?[y/N]") in "YESyes":
                 return None
             exit(1)
